@@ -14,6 +14,7 @@ const tree = trees.mkdir(".",
 );
 console.log(JSON.stringify(tree) + "\n");
 
+
 const changeOwner = (node, newOwner) => {
     const name = trees.getName(node);
     const newMeta = _.cloneDeep(trees.getMeta(node));
@@ -28,6 +29,7 @@ const changeOwner = (node, newOwner) => {
 
     return trees.mkdir(name, newChildren, newMeta);
 };
+
 
 const newTree = changeOwner(tree, "you");
 console.log(JSON.stringify(tree)+ "\n");
